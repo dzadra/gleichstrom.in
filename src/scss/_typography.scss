@@ -6,46 +6,64 @@
 
 @font-face {
   font-family: 'IBM Plex Sans Regular';
-  src: url('../assets/fonts/IBM_sans/eot/IBMPlexSans-Regular.eot'); /* IE9 Compat Modes */
-  url('../assets/fonts/IBM_sans/woff2/IBMPlexSans-Regular-Latin1.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../assets/fonts/IBM_sans/woff/IBMPlexSans-Regular-Latin1.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../assets/fonts/IBM_sans/ttf/IBMPlexSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../font/sans/eot/IBMPlexSans-Regular.eot'),
+  url('../font/sans/woff2/IBMPlexSans-Regular-Latin1.woff2') format('woff2'),
+  url('../font/sans/woff/IBMPlexSans-Regular-Latin1.woff') format('woff'),
+  url('../font/sans/ttf/IBMPlexSans-Regular.ttf')  format('truetype'),
 }
 
 @font-face {
   font-family: 'IBM Plex Sans RegularItalic';
-  src: url('../assets/fonts/IBM_sans/eot/IBMPlexSans-Italic.eot'); /* IE9 Compat Modes */
-  url('../assets/fonts/IBM_sans/woff2/IBMPlexSans-Italic-Latin1.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../assets/fonts/IBM_sans/woff/IBMPlexSans-Italic-Latin1.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../assets/fonts/IBM_sans/ttf/IBMPlexSans-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../font/sans/eot/IBMPlexSans-Italic.eot'),
+  url('../font/sans/woff2/IBMPlexSans-Italic-Latin1.woff2') format('woff2'),
+  url('../font/sans/woff/IBMPlexSans-Italic-Latin1.woff') format('woff'),
+  url('../font/sans/ttf/IBMPlexSans-Italic.ttf')  format('truetype'),
 }
 
 @font-face {
   font-family: 'IBM Plex Sans Bold';
-  src: url('../assets/fonts/IBM_sans/eot/IBMPlexSans-Bold.eot'); /* IE9 Compat Modes */
-url('../assets/fonts/IBM_sans/woff2/IBMPlexSans-Bold-Latin1.woff2') format('woff2'), /* Super Modern Browsers */
-url('../assets/fonts/IBM_sans/woff/IBMPlexSans-Bold-Latin1.woff') format('woff'), /* Pretty Modern Browsers */
-url('../assets/fonts/IBM_sans/ttf/IBMPlexSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../font/sans/eot/IBMPlexSans-Bold.eot'),
+url('../font/sans/woff2/IBMPlexSans-Bold-Latin1.woff2') format('woff2'),
+url('../font/sans/woff/IBMPlexSans-Bold-Latin1.woff') format('woff'),
+url('../font/sans/ttf/IBMPlexSans-Bold.ttf')  format('truetype'),
 }
 
 @font-face {
   font-family: 'IBM Plex Sans BoldItalic';
-  src: url('../assets/fonts/IBM_sans/eot/IBMPlexSans-BoldItalic.eot'); /* IE9 Compat Modes */
-url('../assets/fonts/IBM_sans/woff2/IBMPlexSans-BoldItalic-Latin1.woff2') format('woff2'), /* Super Modern Browsers */
-url('../assets/fonts/IBM_sans/woff/IBMPlexSans-BoldItalic-Latin1.woff') format('woff'), /* Pretty Modern Browsers */
-url('../assets/fonts/IBM_sans/ttf/IBMPlexSans-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../font/sans/eot/IBMPlexSans-BoldItalic.eot'),
+url('../font/sans/woff2/IBMPlexSans-BoldItalic-Latin1.woff2') format('woff2'),
+url('../font/sans/woff/IBMPlexSans-BoldItalic-Latin1.woff') format('woff'),
+url('../font/sans/ttf/IBMPlexSans-BoldItalic.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono Regular';
+  src: url('../assets/fonts/mono/eot/IBMPlexMono-Regular.eot'),
+url('../font/mono/woff2/IBMPlexMono-Regular-Latin1.woff2') format('woff2'),
+url('../font/mono/woff/IBMPlexMono-Regular-Latin1.woff') format('woff'),
+url('../font/mono/ttf/IBMPlexMono-Regular.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono RegularItalic';
+  src: url('../font/mono/eot/IBMPlexMono-Regular.eot'),
+url('../font/mono/woff2/IBMPlexMono-Regular-Latin1.woff2') format('woff2'),
+url('../font/mono/woff/IBMPlexMono-Regular-Latin1.woff') format('woff'),
+url('../font/mono/ttf/IBMPlexMono-Regular.ttf')  format('truetype'),
 }
 
 $font-family__regular: 'IBM Plex Sans Regular';
 $font-family__regular-italic: 'IBM Plex Sans RegularItalic';
 $font-family__bold: 'IBM Plex Sans Bold';
 $font-family__bold-italic: 'IBM Plex BoldItalic';
+$font-family__mono: 'IBM Plex Mono Regular';
+$font-family__mono-italic: 'IBM Plex Mono RegularItalic';
 
 $font-weight__regular: 400;
 $font-weight__bold: 600;
 
 $font-size__regular: $size__base;
-$font-size__h1: calculateRem($font-size__regular*3);
+$font-size__h1: calculateRem($font-size__regular*4);
 $font-size__h2: calculateRem($font-size__regular*2);
 $font-size__h3: calculateRem($font-size__regular*1.5);
 $font-size__small: calculateRem($font-size__regular/2);
@@ -64,7 +82,7 @@ p {
   font-weight: $font-weight__regular;
   font-size: $font-size__regular;
   line-height: $line-height__regular;
-  margin-bottom: calculateRem($size__small);
+  margin-bottom: $font-size__small;
 }
 
 h1 {
@@ -72,7 +90,8 @@ h1 {
   font-weight: $font-weight__bold;
   font-size: $font-size__h1;
   line-height: $line-height__regular;
-  margin-bottom: calculateRem($size__grid);
+  margin-top: 0;
+  margin-bottom: $size__grid;
 }
 
 h2 {
@@ -80,7 +99,8 @@ h2 {
   font-weight: $font-weight__bold;
   font-size: $font-size__h2;
   line-height: $line-height__regular;
-  margin-bottom: calculateRem($size__base);
+  margin-top: 0;
+  margin-bottom: $size__base;
 }
 
 h3 {
@@ -88,7 +108,8 @@ h3 {
   font-weight: $font-weight__regular;
   font-size: $font-size__h3;
   line-height: $line-height__regular;
-  margin-bottom: calculateRem($size__small);
+  margin-top: 0;
+  margin-bottom: $size__small;
 }
 
 i, em {

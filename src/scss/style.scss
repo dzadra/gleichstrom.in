@@ -12,19 +12,32 @@ body {
   color: $color__text;
 }
 
-// very basic grid
-// todo: sizes need to be done with variables
-
 .wrapper {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 .row {
   display: flex;
 }
-.row > div {
+
+.column {
   margin: $size__small;
   padding: $size__small;
   flex: 1;
+}
+
+.color__primary {
+  color: $color__primary;
+}
+
+.color__text-faded {
+  color: grey;
+}
+
+.gi_version {
+
+}
+.work-icon img {
+  max-width: 100%;
 }

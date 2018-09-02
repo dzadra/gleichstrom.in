@@ -14,11 +14,10 @@ $breakpoint__large: calculateRem(1024px);
 /*
 * Sizes for grid, borders, spacings, fonts
  */
-$size__base: 18px;
-$size__small: calculateRem($size__base/2); 
+$size__small: calculateRem($size__base/2);
 $size__grid: calculateRem($size__base*2);
- $size__medium: calculateRem($size__base*4);
- $size__large: calculateRem($size__base*8);
+$size__medium: calculateRem($size__base*4);
+$size__large: calculateRem($size__base*8);
 
 /*
 * Colors
