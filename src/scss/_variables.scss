@@ -1,0 +1,29 @@
+/*
+*
+* GIN Framework - Variables
+*
+ */
+
+/*
+* Breakpoints for Media Queries
+ */
+$breakpoint__small: calculateRem(480px);
+$breakpoint__medium: calculateRem(640px);
+$breakpoint__large: calculateRem(1024px);
+
+/*
+* Sizes for grid, borders, spacings, fonts
+ */
+$size__base: 18px;
+$size__small: calculateRem($size__base/2); 
+$size__grid: calculateRem($size__base*2);
+ $size__medium: calculateRem($size__base*4);
+ $size__large: calculateRem($size__base*8);
+
+/*
+* Colors
+ */
+$color__primary: #ef6060;
+$color__text: rgba(0,0,0,100);
+$color__text-faded: fade($color--text, 50%);
+$color__light-gray: fade($color--text, 7%);

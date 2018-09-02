@@ -1,0 +1,10 @@
+/*
+*
+* GIN Framework - Functions
+*
+ */
+
+@function calculateRem($size) {
+  $remSize: $size / $size__base;
+  @return #{$remSize}rem;
+}

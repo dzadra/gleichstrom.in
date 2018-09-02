@@ -1,0 +1,30 @@
+/*
+*
+* Gleichstrøm Industries - Styles
+*
+ */
+
+@import 'functions';
+@import 'variables';
+@import 'typography';
+
+body {
+  color: $color__text;
+}
+
+// very basic grid
+// todo: sizes need to be done with variables
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.row {
+  display: flex;
+}
+.row > div {
+  margin: $size__small;
+  padding: $size__small;
+  flex: 1;
+}
